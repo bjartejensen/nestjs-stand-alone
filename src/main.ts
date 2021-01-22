@@ -10,7 +10,7 @@ async function bootstrap() {
   const configService: ConfigService = app.get(ConfigService);
   // Set the config options
 
-  const key =configService.get<string>('FIREBASE_PRIVATE_KEY').replace(/\\n/g, '\n');
+ /*  const key =configService.get<string>('FIREBASE_PRIVATE_KEY').replace(/\\n/g, '\n');
   console.log("key", key);
 
   const adminConfig: ServiceAccount = {
@@ -18,12 +18,12 @@ async function bootstrap() {
     "privateKey": key,
     "clientEmail": configService.get<string>('FIREBASE_CLIENT_EMAIL'),
   };
-
+ */
   // Initialize the firebase admin app
-  admin.initializeApp({
+  /* admin.initializeApp({
     credential: admin.credential.cert(adminConfig),
     databaseURL: configService.get<string>('FIRESTORE_DB'),
-  });
+  }); */
 
   app.enableCors();
 

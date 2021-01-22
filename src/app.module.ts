@@ -4,7 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MailModule } from './mail/mail.module';
 import { FirestoreService } from './firestore/firestore/firestore.service';
-import { EventModule } from './event/event.module';
+//import { EventModule } from './event/event.module';
 
 @Module({
   imports: [
@@ -12,8 +12,8 @@ import { EventModule } from './event/event.module';
       envFilePath: "development.env",
       isGlobal: true,
     }),
-    MailModule,
-    EventModule],
+    MailModule
+    ],
   controllers: [AppController],
   providers: [AppService, FirestoreService],
 })
